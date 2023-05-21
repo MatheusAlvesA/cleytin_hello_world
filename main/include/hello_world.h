@@ -19,6 +19,7 @@ public:
 private:
     CEText *text;
     uint64_t timeStart;
+    CEContainer *c;
 };
 
 #endif
