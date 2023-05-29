@@ -10,16 +10,14 @@ public:
     void run(CleytinEngine *engine);
 };
 
-class TextTitle : public CEActiveObject {
+class TextTitle : public CEContainer {
 public:
     void setup(CleytinEngine *engine);
-    void beforeLoop(CleytinEngine *engine);
     void loop(CleytinEngine *engine);
-    void beforeRender(CleytinEngine *engine);
+
 private:
     CEText *text;
     uint64_t timeStart;
-    CEContainer *c;
 };
 
 #endif
