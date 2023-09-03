@@ -1,12 +1,12 @@
 #include "cleytin_engine.h"
-#include "hello_world.h"
+#include "fase1.h"
 
 extern "C" {
 
 void app_main(void)
 {
     CleytinEngine *engine = new CleytinEngine();
-    HelloWorld *hw = new HelloWorld();
+    Game *hw = new Game();
 
     hw->run(engine);
 }

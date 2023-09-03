@@ -1,0 +1,15 @@
+{
+    "headerPath": "./main/include/storage.h",
+    "maxBinSize": 5000000,
+    "banks": [
+        {
+            "key": "bank_1",
+            "data": [
+                {
+                    "key": "hello",
+                    "data": [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100, 0]
+                }
+            ]
+        }
+    ]
+}

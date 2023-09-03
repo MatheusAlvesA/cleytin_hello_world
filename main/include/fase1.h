@@ -1,11 +1,11 @@
-#ifndef FASE_1_HELLO_WORLD
-#define FASE_1_HELLO_WORLD
+#ifndef FASE_1_GAME
+#define FASE_1_GAME
 
 #include "cleytin_engine.h"
 #include "ce_text.h"
 #include "ce_container.h"
 
-class HelloWorld {
+class Game {
 public:
     void run(CleytinEngine *engine);
 };

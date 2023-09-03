@@ -1,6 +1,6 @@
-#include "hello_world.h"
+#include "fase1.h"
 
-void HelloWorld::run(CleytinEngine *engine) {
+void Game::run(CleytinEngine *engine) {
     TextTitle *title = new TextTitle();
     engine->addObject(title);
 
