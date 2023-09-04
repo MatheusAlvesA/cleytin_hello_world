@@ -1,4 +1,4 @@
-import sys, os, json, re
+import sys, os, json, re, base64
 
 GAME_ROM_ADDRESS = 0x100000
 
@@ -62,13 +62,14 @@ def compile_bank(metadata):
     payload = []
     pointers = []
     for var in metadata["data"]:
-        payload += var["data"]
+        parsed_data = base64.b64decode(var["data"])
+        payload += parsed_data
         pointers.append({
             "key": key + "_" + var["key"],
             "pointer": pointer,
-            "size": len(var["data"]),
+            "size": len(parsed_data),
         })
-        pointer += len(var["data"])
+        pointer += len(parsed_data)
 
     if(len(payload) > 4 * 1000 * 1024):
         print("Banco " + metadata["key"] + " é muito grande (" + str(len(payload)) + " bytes). Max: 4MB")
