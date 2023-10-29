@@ -1,23 +1,13 @@
-#ifndef FASE_1_GAME
-#define FASE_1_GAME
+#ifndef FASE_1_H
+#define FASE_1_H
 
 #include "cleytin_engine.h"
-#include "ce_text.h"
-#include "ce_container.h"
+#include "text_title.h"
+#include "cleytin_controls.h"
 
-class Game {
+class Fase1 {
 public:
-    void run(CleytinEngine *engine);
-};
-
-class TextTitle : public CEContainer {
-public:
-    void setup(CleytinEngine *engine);
-    void loop(CleytinEngine *engine);
-
-private:
-    CEText *text;
-    uint64_t timeStart;
+    void run(CleytinEngine *engine, CleytinControls *controls);
 };
 
 #endif
